@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+{% block body %}
+    <h1>Le Bon Steam</h1>
+    {% if not app.user %}
+    <a href="{{ path('security_login') }}">Se connecter</a>
+    {% else %}
+    <a href="{{ path('security_logout') }}">Se deconnecter</a>
+    {% endif %}
+{% endblock %}
