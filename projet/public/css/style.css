@@ -1,0 +1,59 @@
+body{
+  background : #060b56;
+}
+
+
+h1{
+  color : white;
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.InscriptionLogin {
+  color : white;
+  line-height : 20px;
+  padding-top : 120px;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.form-group {
+  color : white;
+}
+.form-control {
+  background-color: white;
+  line-height: 10px;
+}
+
+
+.btn-success {
+  color: white;
+  font-family: 'Pacifico', cursive;
+  background-color: #060b56;
+  border: none;
+  //box-shadow: 5px 5px 10px #ccc;
+  box-shadow: 0px 0px 5px 5px rgba(0, 120, 255, .5);
+}
+.btn-success:hover{ /* souris sur le bouton */
+  background-color: rgba(0, 120, 255);
+}
+/*.btn-success:active { /* bouton cliqué */
+  /*background-color: #060b56;
+}*/
+
+
+/*.btn-connect {
+  color: yellow;
+}*/
+
+/*.registration {
+  color: red;
+}*/

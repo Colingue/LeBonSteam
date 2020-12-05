@@ -3,6 +3,8 @@
 {% block body %}
     <h1>Connectez-vous</h1>
 
+    <div class="InscriptionLogin">
+
     <form action="{{ path('security_login') }}" method="post">
         <div class="form-group">
             <p>Nom d'utilisateur</p>
@@ -17,5 +19,8 @@
         </div>
     </form>
 
-    <a href="{{ path('security_registration') }}">Vous n'êtes pas inscrit ? Inscrivez vous !</a>
+    <a href="{{ path('security_registration') }}">Vous n'êtes pas inscrit ? Inscrivez-vous !</a>
+
+    </div>
+
 {% endblock %}
