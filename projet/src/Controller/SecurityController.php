@@ -4,12 +4,16 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegistrationType;
+use App\Form\ResetPasswordType;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
 
 class SecurityController extends AbstractController
 {
@@ -50,4 +54,43 @@ class SecurityController extends AbstractController
      * @Route ("/logout", name="security_logout")
      */
     public function logout() {}
+
+    /**
+     * @Route ("/profile/{id}", name="profile")
+     */
+   public function profile(User $user ,Request $request) {
+        return $this->render('profile/view_profile.html.twig');
+   }
+
+    /**
+     * @Route ("/profile/{id}/edit", name="edit_profile")
+     */
+   public function editProfil(User $user, Request $request, EntityManagerInterface $manager)
+   {
+        $form = $this->createFormBuilder($user)
+            ->add('username')
+            ->add('save', SubmitType::class)
+            ->getForm();
+
+        $username = $user->getUsername();
+       $form->handleRequest($request);
+
+       if ($form->isSubmitted() && $form->isValid()){
+
+           $manager->persist($user);
+           $manager->flush();
+
+           return $this->redirectToRoute('profile', array('id' => $user->getId()));
+       }
+       else{
+           $user->setUsername($username);
+       }
+
+
+       return $this->render('profile/edit_profile.html.twig', [
+           'formEditUser' => $form->createView()
+       ]);
+   }
 }
+
+

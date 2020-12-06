@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if app.user %}
+    <h1>Mon profil</h1>
+        <div class="form-group">
+            <p>{{ app.user.username }}</p>
+        </div>
+
+        <a href="{{ path('edit_profile', {id: app.user.id}) }}">Editer profil</a>
+
+    {% endif %}
+{% endblock %}

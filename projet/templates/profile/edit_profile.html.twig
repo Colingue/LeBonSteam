@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if app.user %}
+        <h1>Editer mon profil</h1>
+            {{ form_start(formEditUser) }}
+
+            <div class="form-group">
+                {{ form_row(formEditUser.username, {'label' : 'Nom d\'utilisateur'}) }}
+            </div>
+            {{ form_end(formEditUser) }}
+
+    {% endif %}
+{% endblock %}

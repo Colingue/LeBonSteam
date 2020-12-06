@@ -9,4 +9,5 @@
     {% else %}
     <a href="{{ path('security_logout') }}">Se deconnecter</a>
     {% endif %}
+    <a href="{{ path('profile', {id: app.user.id }) }}">Mon Espace Personnel</a>
 {% endblock %}
