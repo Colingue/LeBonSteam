@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="Création du projet Symfony">
-      <change afterPath="$PROJECT_DIR$/templates/profile/edit_profile.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profile/view_profile.html.twig" afterDir="false" />
+    <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/post/create_post.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LbsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LbsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +148,9 @@
       <workItem from="1607177000761" duration="7428000" />
       <workItem from="1607254184156" duration="355000" />
       <workItem from="1607258124358" duration="20332000" />
-      <workItem from="1607280296058" duration="2686000" />
+      <workItem from="1607280296058" duration="2815000" />
+      <workItem from="1607283256157" duration="43000" />
+      <workItem from="1607354190189" duration="17624000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -175,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606820688136</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changement nom d'utisateur possible, page profil">
+      <created>1607283084832</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607283084832</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changement nom d'utisateur possible, page profil">
+      <created>1607283123214</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607283123214</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,21 +195,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Création du projet Symfony" />
-    <option name="LAST_COMMIT_MESSAGE" value="Création du projet Symfony" />
+    <MESSAGE value="Changement nom d'utisateur possible" />
+    <MESSAGE value="Changement nom d'utisateur possible, page profil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changement nom d'utisateur possible, page profil" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1607016609133" />
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607358211741">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1607358211741" />
     <state x="197" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1606813937869">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="197" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606813937869" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1607182992975">
+    <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1607362463381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607182992975" />
+    <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1607283122412">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607283122412" />
     <state x="151" y="65" key="DiffContextDialog" timestamp="1606820652040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -206,18 +228,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606822333878" />
-    <state width="669" height="446" key="SwitcherDM" timestamp="1607018725790">
+    <state width="669" height="446" key="SwitcherDM" timestamp="1607361777452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1607018725790" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1606820694679">
+    <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1607361777452" />
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607283129883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606820694679" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607261877234">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607283129883" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607354780140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607261877234" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607354780140" />
     <state x="41" y="190" key="run.anything.popup" timestamp="1607254203047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

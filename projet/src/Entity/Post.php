@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PostRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -26,6 +28,11 @@ class Post
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
+    private $title;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private $description;
 
     /**
@@ -36,17 +43,22 @@ class Post
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $category;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $download_link;
 
     /**
      * @ORM\Column(type="integer")
      */
     private $downloads;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Category::class, mappedBy="posts")
+     */
+    private $categories;
+
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -65,16 +77,24 @@ class Post
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function setTitle($title): void
+    {
+        $this->title = $title;
+    }
+
+    public function getDescription()
     {
         return $this->description;
     }
 
-    public function setDescription(?string $description): self
+    public function setDescription($description): void
     {
         $this->description = $description;
-
-        return $this;
     }
 
     public function getDateCreation(): ?\DateTimeInterface
@@ -85,18 +105,6 @@ class Post
     public function setDateCreation(\DateTimeInterface $date_creation): self
     {
         $this->date_creation = $date_creation;
-
-        return $this;
-    }
-
-    public function getCategory(): ?string
-    {
-        return $this->category;
-    }
-
-    public function setCategory(string $category): self
-    {
-        $this->category = $category;
 
         return $this;
     }
@@ -121,6 +129,33 @@ class Post
     public function setDownloads(int $downloads): self
     {
         $this->downloads = $downloads;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Category[]
+     */
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+
+    public function addCategory(Category $category): self
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories[] = $category;
+            $category->addPost($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Category $category): self
+    {
+        if ($this->categories->removeElement($category)) {
+            $category->removePost($this);
+        }
 
         return $this;
     }
