@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/post/create_post.html.twig" afterDir="false" />
+    <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="creation table category et post &#10;Possibilité de creer un post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LbsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LbsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +146,7 @@
       <workItem from="1607258124358" duration="20332000" />
       <workItem from="1607280296058" duration="2815000" />
       <workItem from="1607283256157" duration="43000" />
-      <workItem from="1607354190189" duration="17624000" />
+      <workItem from="1607354190189" duration="17824000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -187,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607283123214</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="creation table category et post &#10;Possibilité de creer un post">
+      <created>1607375075032</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607375075032</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +200,8 @@
     <MESSAGE value="Création du projet Symfony" />
     <MESSAGE value="Changement nom d'utisateur possible" />
     <MESSAGE value="Changement nom d'utisateur possible, page profil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changement nom d'utisateur possible, page profil" />
+    <MESSAGE value="creation table category et post &#10;Possibilité de creer un post" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation table category et post &#10;Possibilité de creer un post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
@@ -216,10 +220,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1607283122412">
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1607375090695">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607283122412" />
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607375090695" />
     <state x="151" y="65" key="DiffContextDialog" timestamp="1606820652040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -232,14 +236,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1607361777452" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607283129883">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607375203835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607283129883" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607354780140">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607375203835" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607375194494">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607354780140" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607375194494" />
     <state x="41" y="190" key="run.anything.popup" timestamp="1607254203047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
