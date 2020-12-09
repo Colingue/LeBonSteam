@@ -15,30 +15,35 @@
         <h2>POSTS</h2>
         <section class="posts">
             {% for post in posts | reverse %}
-                <post>
-                    <h3>{{ post.title }}</h3>
-                    <div class="author">
-                        <p>Par {{ post.user.username }}</p>
-                    </div>
-                    <div class="metadata">
-                        <p>Publié le {{ post.dateCreation | date('d/m/y') }} à {{ post.DateCreation | date('H:i') }}</p>
-                    </div>
-                    {% if app.user == post.user %}
-                    <div class="edit-post">
-                        <a href="{{ path('edit_post', {id: post.id }) }}">Editer</a>
-                    </div>
-                    {% endif %}
-                    <div class="description">
-                        {{ post.description | raw }}
-                        <a href="#" class="btn btn-primary">Go</a>
-                    </div>
-                    <div class="compteur-download">
-                        {{ post.downloads }}
-                    </div>
-                    <div class="download-link">
-                        <a href="{{ post.downloadLink }}" class="btn btn-primary">Télécharger</a>
-                    </div>
-                </post>
+                <div class="post">
+                    <a href="{{ path('show_post', {id: post.id}) }}">
+                        <h3>{{ post.title }}</h3>
+                        <div class="author">
+                            <p>Par {{ post.user.username }}</p>
+                        </div>
+                        <div class="metadata">
+                            <p>Publié le {{ post.dateCreation | date('d/m/y') }} à {{ post.DateCreation | date('H:i') }}</p>
+                        </div>
+                        <div class="category">
+                            <a href="#">{{ post.category }}</a>
+                        </div>
+                        {% if app.user == post.user %}
+                            <div class="edit-post">
+                                <a href="{{ path('edit_post', {id: post.id }) }}">Editer</a>
+                            </div>
+                        {% endif %}
+                        <div class="description">
+                            {{ post.description | raw }}
+                            <a href="#" class="btn btn-primary">Go</a>
+                        </div>
+                        <div class="compteur-download">
+                            {{ post.downloads }}
+                        </div>
+                        <div class="download-link">
+                            <a href="{{ post.downloadLink }}" class="btn btn-primary">Télécharger</a>
+                        </div>
+                    </a>
+                </div>
             {% endfor %}
         </section>
 {% endblock %}

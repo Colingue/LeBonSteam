@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bonjour !{% endblock %}
+
+{% block body %}
+    <h1>POSTS</h1>
+        <div class="post">
+            <h3>{{ post.title }}</h3>
+            <div class="author">
+                <p>Par {{ post.user.username }}</p>
+            </div>
+            <div class="metadata">
+                <p>Publié le {{ post.dateCreation | date('d/m/y') }} à {{ post.DateCreation | date('H:i') }}</p>
+            </div>
+            <div class="category">
+                <a href="#">{{ post.category }}</a>
+            </div>
+            {% if app.user == post.user %}
+                <div class="edit-post">
+                    <a href="{{ path('edit_post', {id: post.id }) }}">Editer</a>
+                </div>
+            {% endif %}
+            <div class="description">
+                {{ post.description | raw }}
+                <a href="#" class="btn btn-primary">Go</a>
+            </div>
+            <div class="compteur-download">
+                {{ post.downloads }}
+            </div>
+            <div class="download-link">
+                <a href="{{ post.downloadLink }}" class="btn btn-primary">Télécharger</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

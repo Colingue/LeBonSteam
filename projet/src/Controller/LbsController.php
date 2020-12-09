@@ -32,7 +32,20 @@ class LbsController extends AbstractController
     }
 
     /**
-     * @Route ("/edit/post/{id}", name="edit_post")
+     * @Route ("/post/{id}", name="show_post")
+     */
+    public function showPost(Post $post)
+    {
+        $repo = $this->getDoctrine()->getRepository(Post::class);
+
+        $post = $repo->find($post->getId());
+
+        return $this->render('show_post.html.twig', [
+            'post' => $post
+        ]);
+    }
+    /**
+     * @Route ("/post/{id}/edit", name="edit_post")
      * @Route("/new", name="new_post")
      */
 
