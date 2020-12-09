@@ -50,10 +50,12 @@ class Post
      */
     private $downloads;
 
+
     /**
-     * @ORM\ManyToMany(targetEntity=Category::class, mappedBy="posts")
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="posts")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $categories;
+    private $category;
 
     public function __construct()
     {
@@ -133,29 +135,14 @@ class Post
         return $this;
     }
 
-    /**
-     * @return Collection|Category[]
-     */
-    public function getCategories(): Collection
+    public function getCategory(): ?Category
     {
-        return $this->categories;
+        return $this->category;
     }
 
-    public function addCategory(Category $category): self
+    public function setCategory(?Category $category): self
     {
-        if (!$this->categories->contains($category)) {
-            $this->categories[] = $category;
-            $category->addPost($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCategory(Category $category): self
-    {
-        if ($this->categories->removeElement($category)) {
-            $category->removePost($this);
-        }
+        $this->category = $category;
 
         return $this;
     }

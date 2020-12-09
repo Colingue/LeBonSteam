@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="creation table category et post &#10;Possibilité de creer un post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LbsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LbsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/create_post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/create_post.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +151,11 @@
       <workItem from="1607258124358" duration="20332000" />
       <workItem from="1607280296058" duration="2815000" />
       <workItem from="1607283256157" duration="43000" />
-      <workItem from="1607354190189" duration="17824000" />
+      <workItem from="1607354190189" duration="17848000" />
+      <workItem from="1607427236675" duration="1430000" />
+      <workItem from="1607458023786" duration="214000" />
+      <workItem from="1607515802586" duration="650000" />
+      <workItem from="1607526536989" duration="12268000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -190,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607375075032</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="creation table category et post &#10;Possibilité de creer un post">
+      <created>1607375226115</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607375226115</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,14 +236,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1607375090695">
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1607533514647">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607375090695" />
-    <state x="151" y="65" key="DiffContextDialog" timestamp="1606820652040">
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607533514647" />
+    <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1607458237611">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="151" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1606820652040" />
+    <state x="151" y="65" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1607458237611" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606822333878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -236,18 +252,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1607361777452" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607375203835">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607375228981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607375203835" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607375194494">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607375228981" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607526540602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607375194494" />
-    <state x="41" y="190" key="run.anything.popup" timestamp="1607254203047">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607526540602" />
+    <state x="41" y="190" key="run.anything.popup" timestamp="1607534350944">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="41" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607254203047" />
+    <state x="41" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607534350944" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607177909869">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

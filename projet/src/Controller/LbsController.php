@@ -21,23 +21,32 @@ class LbsController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('lbs/index.html.twig');
+        $repo = $this->getDoctrine()->getRepository(Post::class);
+
+        $posts = $repo->findAll();
+
+
+        return $this->render('lbs/index.html.twig', [
+            'posts' => $posts
+        ]);
     }
 
     /**
+     * @Route ("/edit/post/{id}", name="edit_post")
      * @Route("/new", name="new_post")
      */
-    public function createPost(Request $request, EntityManagerInterface $manager)
-    {
 
-        $post = new Post();
+    public function createPost(Post $post = null, Request $request, EntityManagerInterface $manager)
+    {
+        if (!$post){
+            $post = new Post();
+        }
 
         $formPostCreator = $this->createFormBuilder($post)
             ->add('title', TextType::class)
             ->add('description', TextareaType::class)
-            ->add('categories', EntityType::class, array(
-                'class' => Category::class,
-                'multiple' => true))
+            ->add('category', EntityType::class, array(
+                'class' => Category::class))
             ->add('download_link')
             ->getForm();
 
@@ -59,4 +68,6 @@ class LbsController extends AbstractController
             'formPostCreator' => $formPostCreator->createView()
         ]);
     }
+
+
 }
