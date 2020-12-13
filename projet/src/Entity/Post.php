@@ -46,20 +46,20 @@ class Post
     private $download_link;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $downloads;
-
-
-    /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="posts")
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
+    /**
+     * @ORM\OneToMany(targetEntity=PostDownload::class, mappedBy="post")
+     */
+    private $downloadCounter;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->downloadCounter = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -123,18 +123,6 @@ class Post
         return $this;
     }
 
-    public function getDownloads(): ?int
-    {
-        return $this->downloads;
-    }
-
-    public function setDownloads(int $downloads): self
-    {
-        $this->downloads = $downloads;
-
-        return $this;
-    }
-
     public function getCategory(): ?Category
     {
         return $this->category;
@@ -145,5 +133,51 @@ class Post
         $this->category = $category;
 
         return $this;
+    }
+
+    /**
+     * @return Collection|PostDownload[]
+     */
+    public function getDownloadCounter(): Collection
+    {
+        return $this->downloadCounter;
+    }
+
+    public function addDownloadCounter(PostDownload $downloadCounter): self
+    {
+        if (!$this->downloadCounter->contains($downloadCounter)) {
+            $this->downloadCounter[] = $downloadCounter;
+            $downloadCounter->setPost($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDownloadCounter(PostDownload $downloadCounter): self
+    {
+        if ($this->downloadCounter->removeElement($downloadCounter)) {
+            // set the owning side to null (unless already changed)
+            if ($downloadCounter->getPost() === $this) {
+                $downloadCounter->setPost(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+    /**
+     * Permet de savoir sur l'utilisateur a télécharger le jeu (il clique sur le lien)
+     *
+     * @param User $user
+     * @return bool
+     */
+    public function isDownloadedByUser(User $user){
+        foreach ($this->downloadCounter as $download) {
+            if ($download->getUser() === $user){
+                return true;
+            }
+        }
+        return false;
     }
 }

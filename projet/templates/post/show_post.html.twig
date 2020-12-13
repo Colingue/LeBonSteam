@@ -3,9 +3,8 @@
 {% block title %}Bonjour !{% endblock %}
 
 {% block body %}
-    <h1>POSTS</h1>
+    <h1>{{ post.title }}</h1>
         <div class="post">
-            <h3>{{ post.title }}</h3>
             <div class="author">
                 <p>Par {{ post.user.username }}</p>
             </div>
@@ -24,12 +23,14 @@
                 {{ post.description | raw }}
                 <a href="#" class="btn btn-primary">Go</a>
             </div>
-            <div class="compteur-download">
-                {{ post.downloads }}
-            </div>
-            <div class="download-link">
-                <a href="{{ post.downloadLink }}" class="btn btn-primary">Télécharger</a>
-            </div>
+            <a href="{{ path( 'post_download', {'id': post.id } ) }}" class="btn btn-link js-download">
+                {% if app.user and post.isDownloadedByUser(app.user) %}
+                    <i class="fas fa-arrow-alt-circle-down"></i>
+                {% else %}
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                {% endif %}
+                <span class="js-download">{{ post.downloadCounter | length }}</span>
+                <span class="js-label">Download</span>
+            </a>
         </div>
-    {% endfor %}
 {% endblock %}

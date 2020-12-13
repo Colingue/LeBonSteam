@@ -36,14 +36,56 @@
                             {{ post.description | raw }}
                             <a href="#" class="btn btn-primary">Go</a>
                         </div>
-                        <div class="compteur-download">
-                            {{ post.downloads }}
-                        </div>
                         <div class="download-link">
-                            <a href="{{ post.downloadLink }}" class="btn btn-primary">Télécharger</a>
+                            <a href="{{ path( 'post_download', {'id': post.id } ) }}" class="btn btn-link js-download">
+                                {% if app.user and post.isDownloadedByUser(app.user) %}
+                                    <i class="fas fa-arrow-alt-circle-down"></i>
+                                {% else %}
+                                    <i class="far fa-arrow-alt-circle-down"></i>
+                                {% endif %}
+                                <span class="js-download">{{ post.downloadCounter | length }}</span>
+                                <span class="js-label">Download</span>
+                            </a>
+
                         </div>
                     </a>
                 </div>
             {% endfor %}
         </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+
+        function onClickBtnDownload(event) {
+            event.preventDefault();
+
+            const url = this.href;
+            const spanCount = this.querySelector('span.js-download');
+            const icon = this.querySelector('i');
+
+            axios.get(url).then(function (response){
+
+                spanCount.textContent = response.data.download;
+                window.open( response.data.link, "_blank");
+
+                
+                if (icon.classList.contains('far')) {
+                    icon.classList.replace('far', 'fas');
+                }
+
+            }).catch(function (error){
+                if(error.response.status === 401)
+                {
+                    window.alert("Vous devez être connecté pour pouvoir faire cette opération.");
+                }
+            })
+        }
+
+        document.querySelectorAll('a.js-download').forEach(function (link){
+            link.addEventListener('click', onClickBtnDownload)
+        })
+    </script>
 {% endblock %}

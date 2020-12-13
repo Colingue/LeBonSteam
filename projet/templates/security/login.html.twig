@@ -14,6 +14,12 @@
             <p>Mot de passe</p>
             <input required name="_password" type="password" class="form-control"><br>
         </div>
+
+        {% if error %}
+            <div class="form-error">
+                <span class="error">Vos identifiants sont incorrects</span>
+            </div>
+        {% endif %}
         <div class="form-group">
             <button type="submit" class="btn btn-success">Se connectez</button>
         </div>

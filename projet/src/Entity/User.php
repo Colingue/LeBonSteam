@@ -48,9 +48,15 @@ class User implements UserInterface
      */
     private $posts;
 
+    /**
+     * @ORM\OneToMany(targetEntity=PostDownload::class, mappedBy="user")
+     */
+    private $postDownloads;
+
     public function __construct()
     {
         $this->posts = new ArrayCollection();
+        $this->postDownloads = new ArrayCollection();
     }
 
 
@@ -132,6 +138,36 @@ class User implements UserInterface
             // set the owning side to null (unless already changed)
             if ($post->getUser() === $this) {
                 $post->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|PostDownload[]
+     */
+    public function getPostDownloads(): Collection
+    {
+        return $this->postDownloads;
+    }
+
+    public function addPostDownload(PostDownload $postDownload): self
+    {
+        if (!$this->postDownloads->contains($postDownload)) {
+            $this->postDownloads[] = $postDownload;
+            $postDownload->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePostDownload(PostDownload $postDownload): self
+    {
+        if ($this->postDownloads->removeElement($postDownload)) {
+            // set the owning side to null (unless already changed)
+            if ($postDownload->getUser() === $this) {
+                $postDownload->setUser(null);
             }
         }
 

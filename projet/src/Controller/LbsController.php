@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Entity\Post;
+use App\Entity\PostDownload;
 use App\Entity\User;
+use App\Repository\PostDownloadRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -19,6 +21,8 @@ class LbsController extends AbstractController
     /**
      * @Route("/", name="home")
      */
+
+    // Page d'accueil avec tous les posts
     public function index(): Response
     {
         $repo = $this->getDoctrine()->getRepository(Post::class);
@@ -31,6 +35,7 @@ class LbsController extends AbstractController
         ]);
     }
 
+    // Page d'un post en particulier
     /**
      * @Route ("/post/{id}", name="show_post")
      */
@@ -40,15 +45,17 @@ class LbsController extends AbstractController
 
         $post = $repo->find($post->getId());
 
-        return $this->render('show_post.html.twig', [
+        return $this->render('post/show_post.html.twig', [
             'post' => $post
         ]);
     }
+
     /**
      * @Route ("/post/{id}/edit", name="edit_post")
      * @Route("/new", name="new_post")
      */
 
+    // Page pour créer un post
     public function createPost(Post $post = null, Request $request, EntityManagerInterface $manager)
     {
         if (!$post){
@@ -69,7 +76,6 @@ class LbsController extends AbstractController
         {
             $post->setUser($this->getUser());
             $post->setDateCreation(new \DateTime());
-            $post->setDownloads(0);
 
             $manager->persist($post);
             $manager->flush();
@@ -82,5 +88,50 @@ class LbsController extends AbstractController
         ]);
     }
 
+    /**
+     * Permet de download un contenu (lien)
+     *
+     * @Route ("/post/{id}/download", name="post_download")
+     *
+     * @param Post $post
+     * @param ObjectManager $manager
+     * @param PostDownloadRepository $repo
+     * @return Response
+     */
+    public function download(Post $post, EntityManagerInterface $manager, PostDownloadRepository $downloadRepository) : Response {
+        $user = $this->getUser();
 
+        if (!$user){
+            return $this->json([
+                'code' => '401',
+                'message' => 'Vous devez être connecté.'
+            ], 401);
+        }
+
+        elseif ($post->isDownloadedByUser($user)){
+            return $this->json([
+                'code' => '200',
+                'message' => 'Post déjà download',
+                'download' => $downloadRepository->count(['post' => $post]),
+                'link' => $post->getDownloadLink()
+            ], 200);
+        }
+
+
+
+        $download = new PostDownload();
+        $download->setUser($user);
+        $download->setPost($post);
+
+        $manager->persist($download);
+        $manager->flush();
+
+
+        return $this->json([
+            'code' => 200,
+            'message' => 'Download bien ajouté',
+            'download' => $downloadRepository->count(['post' => $post]),
+            'link' => $post->getDownloadLink()],
+            200);
+    }
 }
