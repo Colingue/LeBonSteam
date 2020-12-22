@@ -20,24 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/search/search_bar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/posts/placeholder.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LbsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LbsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post/create_post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/create_post.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post/show_post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/show_post.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +137,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LeBonSteam-main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images/posts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,6 +150,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\public\images\posts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\templates\search" />
     </key>
@@ -220,7 +208,7 @@
       <workItem from="1608316466330" duration="4461000" />
       <workItem from="1608399134360" duration="8361000" />
       <workItem from="1608542720844" duration="12597000" />
-      <workItem from="1608647820283" duration="2019000" />
+      <workItem from="1608647820283" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -292,7 +280,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607890832318</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts">
+      <created>1608649964779</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608649964779</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts">
+      <created>1608649985422</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608649985422</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +330,8 @@
     <MESSAGE value="Post sur la page d'accueil&#10;Une Post -&gt; Une Catégorie&#10;Mise à jour de la Base de données" />
     <MESSAGE value="push pour erreur aurore" />
     <MESSAGE value="Mise en place du telechargement (AJAX et JS)&#10;compteur et ouverture de page avec le lien de telechargement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place du telechargement (AJAX et JS)&#10;compteur et ouverture de page avec le lien de telechargement" />
+    <MESSAGE value="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
@@ -355,14 +358,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1607890831486">
+    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1608649984978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607890831486" />
-    <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1607540198678">
+    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608649984978" />
+    <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1608649875731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="151" y="65" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1607540198678" />
+    <state x="151" y="65" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1608649875731" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606822333878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -383,10 +386,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1607932574500" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607890836173">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1608649992244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607890836173" />
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608649992244" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608649840673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
