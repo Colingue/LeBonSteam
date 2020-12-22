@@ -22,6 +22,10 @@
     {{ form_row(formPostCreator.download_link, {'label' : 'Lien de téléchargement', 'attr': {'class' : 'form-control'}} ) }}
     </div>
 
+    <div class="form-group">
+        {{ form_row(formPostCreator.imageFile, {'label' : 'Image du jeu', 'attr': {'class' : 'form-control'}} ) }}
+    </div>
+
     <button type="submit" class="btn btn-success">Publier </button>
     {{ form_end(formPostCreator) }}
 {% endblock %}

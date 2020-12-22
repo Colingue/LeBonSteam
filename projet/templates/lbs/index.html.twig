@@ -39,7 +39,7 @@
                         <div class="download-link">
                             <a href="{{ path( 'post_download', {'id': post.id } ) }}" class="btn btn-link js-download">
                                 {% if app.user and post.isDownloadedByUser(app.user) %}
-                                    <i class="fas fa-arrow-alt-circle-down"></i>
+                                    <i class="fas fa-chevron-circle-down"></i>
                                 {% else %}
                                     <i class="far fa-arrow-alt-circle-down"></i>
                                 {% endif %}
@@ -47,6 +47,12 @@
                                 <span class="js-label">Download</span>
                             </a>
 
+                        </div>
+
+                        <div class="image">
+                            {% if post.filename %}
+                                <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('my_thumb') }}" alt="image du jeu">
+                            {% endif %}
                         </div>
                     </a>
                 </div>
@@ -73,7 +79,8 @@
 
                 
                 if (icon.classList.contains('far')) {
-                    icon.classList.replace('far', 'fas');
+                    icon.classList.replace('far', 'fas', );
+                    icon.classList.replace('fa-arrow-alt-circle-down', 'fa-chevron-circle-down');
                 }
 
             }).catch(function (error){

@@ -23,6 +23,12 @@
                 {{ post.description | raw }}
                 <a href="#" class="btn btn-primary">Go</a>
             </div>
+
+            <div class="image">
+                {% if post.filename %}
+                    <img src="{{ vich_uploader_asset(post, 'imageFile') }}" alt="image du jeu">
+                {% endif %}
+            </div>
             <a href="{{ path( 'post_download', {'id': post.id } ) }}" class="btn btn-link js-download">
                 {% if app.user and post.isDownloadedByUser(app.user) %}
                     <i class="fas fa-arrow-alt-circle-down"></i>

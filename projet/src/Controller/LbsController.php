@@ -6,9 +6,13 @@ use App\Entity\Category;
 use App\Entity\Post;
 use App\Entity\PostDownload;
 use App\Entity\User;
+use App\Form\SearchType;
+use App\Repository\CategoryRepository;
 use App\Repository\PostDownloadRepository;
+use App\Repository\PostRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +35,8 @@ class LbsController extends AbstractController
 
 
         return $this->render('lbs/index.html.twig', [
-            'posts' => $posts
+            'posts' => $posts ,
+
         ]);
     }
 
@@ -68,6 +73,9 @@ class LbsController extends AbstractController
             ->add('category', EntityType::class, array(
                 'class' => Category::class))
             ->add('download_link')
+            ->add('imageFile', FileType::class, [
+                'required' => false
+            ])
             ->getForm();
 
         $formPostCreator->handleRequest($request);
@@ -133,5 +141,24 @@ class LbsController extends AbstractController
             'download' => $downloadRepository->count(['post' => $post]),
             'link' => $post->getDownloadLink()],
             200);
+    }
+
+
+
+    public function search(Request $request, PostRepository $postRepository)
+    {
+
+
+        $formSearch = $this->createForm(SearchType::class);
+        $search = $formSearch->handleRequest($request);
+
+        if ($formSearch->isSubmitted() && $formSearch->isValid()) {
+            $posts = $postRepository->search($search->get('word')->getData());
+        }
+
+        return $this->render('search/search.html.twig', [
+            'posts' => $posts,
+            'formSearch' => $formSearch->createView()
+        ]);
     }
 }

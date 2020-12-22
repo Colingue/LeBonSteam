@@ -78,6 +78,12 @@
     "doctrine/sql-formatter": {
         "version": "1.1.1"
     },
+    "imagine/imagine": {
+        "version": "1.2.4"
+    },
+    "jms/metadata": {
+        "version": "2.4.0"
+    },
     "laminas/laminas-code": {
         "version": "3.5.0"
     },
@@ -86,6 +92,19 @@
     },
     "laminas/laminas-zendframework-bridge": {
         "version": "1.1.1"
+    },
+    "liip/imagine-bundle": {
+        "version": "1.8",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.8",
+            "ref": "5a5bdc2d0e2533ed6935d5ae562f2b318a8fc1ee"
+        },
+        "files": [
+            "./config/packages/liip_imagine.yaml",
+            "./config/routes/liip_imagine.yaml"
+        ]
     },
     "nikic/php-parser": {
         "version": "v4.10.2"
@@ -113,6 +132,9 @@
         "files": [
             "./config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "symfony/asset": {
+        "version": "v4.4.18"
     },
     "symfony/cache": {
         "version": "v4.4.16"
@@ -235,6 +257,9 @@
     "symfony/orm-pack": {
         "version": "v2.0.0"
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.20.0"
+    },
     "symfony/polyfill-intl-icu": {
         "version": "v1.20.0"
     },
@@ -309,6 +334,12 @@
     "symfony/stopwatch": {
         "version": "v4.4.16"
     },
+    "symfony/string": {
+        "version": "v5.2.1"
+    },
+    "symfony/templating": {
+        "version": "v4.4.18"
+    },
     "symfony/translation-contracts": {
         "version": "v2.3.0"
     },
@@ -382,6 +413,18 @@
     },
     "twig/twig": {
         "version": "v3.1.1"
+    },
+    "vich/uploader-bundle": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.5",
+            "ref": "c4f5755b37fb65b9c6a3cbdae91205c15a137ed4"
+        },
+        "files": [
+            "./config/packages/vich_uploader.yaml"
+        ]
     },
     "webimpress/safe-writer": {
         "version": "2.1.0"

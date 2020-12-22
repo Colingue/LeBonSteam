@@ -19,6 +19,39 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
+    /**
+     * Recherche les posts avec le formulaire
+     *
+     */
+    public function findPostByName(string $query) {
+        $qb = $this->createQueryBuilder('p');
+        $qb
+            ->where(
+                $qb->expr()->andX(
+                    $qb->expr()->orX(
+                        $qb->expr()->like('p.title', ':query'),
+                        $qb->expr()->like('p.description', ':query')
+                    ),
+                    $qb->expr()->isNotNull('p.date_creation')
+                )
+            )
+            ->setParameter('query', '%'.$query.'%');
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    public function apiFindAll() {
+        $qb = $this->createQueryBuilder('a')
+            ->select('a.id', 'a.title', 'a.description', 'a.category', 'a.dateCreation')
+            ->orderBy('a.dateCreation', 'DESC');
+
+        $query = $qb->getQuery();
+
+        return $query->execute();
+    }
+
     // /**
     //  * @return Post[] Returns an array of Post objects
     //  */
