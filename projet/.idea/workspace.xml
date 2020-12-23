@@ -20,9 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/posts/placeholder.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Data/SearchData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SearchForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LbsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LbsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +136,16 @@
       <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
       <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
       <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/theofidry/alice-data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/alice" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/hautelook/alice-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1knSPcPLjNcvLLakz9uSqQoywyo" />
@@ -208,7 +229,9 @@
       <workItem from="1608316466330" duration="4461000" />
       <workItem from="1608399134360" duration="8361000" />
       <workItem from="1608542720844" duration="12597000" />
-      <workItem from="1608647820283" duration="2846000" />
+      <workItem from="1608647820283" duration="2925000" />
+      <workItem from="1608665436397" duration="9690000" />
+      <workItem from="1608722963530" duration="4594000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -294,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608649985422</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ajout d'une image par defaut">
+      <created>1608650687305</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1608650687305</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +361,8 @@
     <MESSAGE value="push pour erreur aurore" />
     <MESSAGE value="Mise en place du telechargement (AJAX et JS)&#10;compteur et ouverture de page avec le lien de telechargement" />
     <MESSAGE value="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts" />
+    <MESSAGE value="ajout d'une image par defaut" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout d'une image par defaut" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
@@ -342,26 +373,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="121" key="#YAML/0.0.1536.824@0.0.1536.824" timestamp="1608648865306" />
-    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608560175046">
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608724419363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1608560175046" />
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1608724419363" />
     <state x="197" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1608558616135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="197" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1608558616135" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607933837092">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608731981729">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607933837092" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608731981729" />
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1607362463381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
-    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1608649984978">
+    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1608650686860">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608649984978" />
+    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608650686860" />
     <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1608649875731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -370,10 +401,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606822333878" />
-    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1607933213696">
+    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1608724453090">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607933213696" />
+    <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1608724453090" />
     <state x="604" y="336" key="NewPhpFileDialog" timestamp="1607933163167">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -386,10 +417,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1607932574500" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1608649992244">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1608650690552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608649992244" />
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608650690552" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608649840673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

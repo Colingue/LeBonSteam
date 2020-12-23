@@ -2,10 +2,12 @@
 
 namespace App\Controller;
 
+use App\Data\SearchData;
 use App\Entity\Category;
 use App\Entity\Post;
 use App\Entity\PostDownload;
 use App\Entity\User;
+use App\Form\SearchForm;
 use App\Form\SearchType;
 use App\Repository\CategoryRepository;
 use App\Repository\PostDownloadRepository;
@@ -27,16 +29,16 @@ class LbsController extends AbstractController
      */
 
     // Page d'accueil avec tous les posts
-    public function index(): Response
+    public function index(PostRepository $postRepo, Request $request): Response
     {
-        $repo = $this->getDoctrine()->getRepository(Post::class);
-
-        $posts = $repo->findAll();
-
+        $data = new SearchData();
+        $form = $this->createForm(SearchForm::class, $data);
+        $form->handleRequest($request);
+        $posts = $postRepo->findSearch($data);
 
         return $this->render('lbs/index.html.twig', [
             'posts' => $posts ,
-
+            'form' => $form->createView()
         ]);
     }
 

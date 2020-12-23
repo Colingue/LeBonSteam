@@ -1,20 +1,57 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SearchController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <header>
+        {{ form_start(form) }}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        {{ form_end(form) }}
+    </header>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/colin/Desktop/LeBonSteam/projet/src/Controller/SearchController.php'|file_link(0) }}">src/Controller/SearchController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/colin/Desktop/LeBonSteam/projet/templates/search/index.html.twig'|file_link(0) }}">templates/search/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <section class="posts">
+        {% for post in posts | reverse %}
+            <div class="post">
+                <a href="{{ path('show_post', {id: post.id}) }}">
+                    <h3>{{ post.title }}</h3>
+                    <div class="author">
+                        <p>Par {{ post.user.username }}</p>
+                    </div>
+                    <div class="metadata">
+                        <p>Publié le {{ post.dateCreation | date('d/m/y') }} à {{ post.DateCreation | date('H:i') }}</p>
+                    </div>
+                    <div class="category">
+                        <a href="#">{{ post.category }}</a>
+                    </div>
+                    {% if app.user == post.user %}
+                        <div class="edit-post">
+                            <a href="{{ path('edit_post', {id: post.id }) }}">Editer</a>
+                        </div>
+                    {% endif %}
+                    <div class="description">
+                        {{ post.description | raw }}
+                        <a href="#" class="btn btn-primary">Go</a>
+                    </div>
+                    <div class="download-link">
+                        <a href="{{ path( 'post_download', {'id': post.id } ) }}" class="btn btn-link js-download">
+                            {% if app.user and post.isDownloadedByUser(app.user) %}
+                                <i class="fas fa-chevron-circle-down"></i>
+                            {% else %}
+                                <i class="far fa-arrow-alt-circle-down"></i>
+                            {% endif %}
+                            <span class="js-download">{{ post.downloadCounter | length }}</span>
+                            <span class="js-label">Download</span>
+                        </a>
+
+                    </div>
+
+                    <div class="image">
+                        {% if post.filename %}
+                            <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('my_thumb') }}" alt="image du jeu">
+                        {% else %}
+                            <img src="{{ '/images/posts/placeholder.jpg'| imagine_filter('my_thumb') }}" alt="image du jeu">
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </section>
 {% endblock %}

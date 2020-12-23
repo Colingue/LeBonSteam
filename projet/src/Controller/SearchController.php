@@ -2,7 +2,11 @@
 
 namespace App\Controller;
 
+use App\Data\SearchData;
+use App\Entity\Category;
+use App\Form\SearchForm;
 use App\Repository\PostRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,10 +19,16 @@ class SearchController extends AbstractController
     /**
      * @Route("/search", name="search")
      */
-    public function index(): Response
+    public function index(PostRepository $postRepo, Request $request)
     {
+        $data = new SearchData();
+        $form = $this->createForm(SearchForm::class, $data);
+        $form->handleRequest($request);
+        $posts = $postRepo->findSearch($data);
+
         return $this->render('search/index.html.twig', [
-            'controller_name' => 'SearchController',
+            'posts' => $posts,
+            'form' => $form->createView()
         ]);
     }
 
@@ -26,6 +36,11 @@ class SearchController extends AbstractController
         $formSearch = $this->createFormBuilder(null)
             ->setAction($this->generateUrl('handle_search'))
             ->add('query', TextType::class)
+            ->add('category', EntityType::class, [
+                'class' => Category::class,
+                'required' => false,
+                'empty_data' => 'Tous'
+                ])
             ->add('search', SubmitType::class)
             ->getForm();
 
@@ -41,8 +56,9 @@ class SearchController extends AbstractController
      */
     public function handleSearch(Request $request, PostRepository $postRepo) {
         $query = $request->request->get('form')['query'];
+        $category = $request->request->getaDataDz4;
         if ($query) {
-            $posts = $postRepo->findPostByName($query);
+            $posts = $postRepo->findPostByName($query, $category);
         }
 
         return $this->render('lbs/index.html.twig', [

@@ -2,9 +2,13 @@
 
 namespace App\Repository;
 
+use App\Data\SearchData;
+use App\Entity\Category;
 use App\Entity\Post;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use App\Repository\CategoryRepository;
+use Doctrine\ORM\Query\AST\Join;
 
 /**
  * @method Post|null find($id, $lockMode = null, $lockVersion = null)
@@ -23,23 +27,62 @@ class PostRepository extends ServiceEntityRepository
      * Recherche les posts avec le formulaire
      *
      */
-    public function findPostByName(string $query) {
+    public function findPostByName(string $query,  $category) {
         $qb = $this->createQueryBuilder('p');
+        $qb->innerJoin('p.category_id', 'c');
+
+        if (is_array($category) || is_object($category))
+        {
+        foreach ($category as $field => $value) {
+            if (!$this->getClassMetadata()->hasField($field)) {
+                // Make sure we only use existing fields (avoid any injection)
+                continue;
+            }
+        }
+
         $qb
             ->where(
                 $qb->expr()->andX(
                     $qb->expr()->orX(
                         $qb->expr()->like('p.title', ':query'),
-                        $qb->expr()->like('p.description', ':query')
+                        $qb->expr()->like('p.description', ':query'),
+                        $qb->expr()->eq('p.'.$field, ':p_'.$field)
                     ),
                     $qb->expr()->isNotNull('p.date_creation')
+
                 )
             )
-            ->setParameter('query', '%'.$query.'%');
+            ->setParameter('query', '%'.$query.'%')
+            ->setParameter('p_'.$field, $value);
         return $qb
             ->getQuery()
             ->getResult();
+    }}
+
+    /**
+     * Recupere les posts liés a la recherche
+     * @return Post[]
+     */
+    public function findSearch(SearchData $search): array {
+        $query = $this
+            ->createQueryBuilder('p')
+            ->select('c', 'p')
+            ->join('p.category', 'c');
+
+            if (!empty($search->q)) {
+                $query = $query
+                    ->andWhere('p.title LIKE :q')
+                    ->setParameter('q', "%{$search->q}%");
+            }
+
+            if (!empty($search->category)) {
+                $query = $query
+                    ->andWhere('c.id IN (:category)')
+                    ->setParameter('category', $search->category);
+            }
+        return $query->getQuery()->getResult();
     }
+
 
 
     public function apiFindAll() {
