@@ -3,16 +3,38 @@
 {% block title %}Bonjour !{% endblock %}
 
 {% block body %}
+
     <h1>Le Bon Steam</h1>
+
+<div class="Index">
+
     {% if not app.user %}
-    <a href="{{ path('security_login') }}">Se connecter</a>
+    <p>Bienvenue sur notre site LeBonSteam !</p>
+    <p>Nous sommes un petit site indépendant de vente de jeu vidéox</p>
+    <p>Alors n'hésitez pas à regarder ^^</p>
+    <br>
+    <a href="{{ path('security_login') }}">La connexion, c'est par ici !</a>
+
+    <img class="logogauche" src="{{ asset('images/titre.png') }}" alt="le logo du site" height="200">
+    <img class="logodroite" src="{{ asset('images/courbes.png') }}" alt="le logo du site" height="200">
+
     {% else %}
-    <a href="{{ path('security_logout') }}">Se deconnecter</a>
-        <a href="{{ path('profile', {'id': app.user.id }) }}">Mon Espace Personnel</a>
+    <Br>
+    <br>
+    <br>
+    <a href="{{ path('security_logout') }}">Se deconnecter</a>  |
+        <a href="{{ path('profile', {'id': app.user.id }) }}">Mon Espace Personnel</a> |
         <a href="{{ path('new_post') }}">Nouveau Post</a>
+
+    <img class="logogauche" src="{{ asset('images/titre.png') }}" alt="le logo du site" height="200">
+    <img class="logodroite" src="{{ asset('images/courbes.png') }}" alt="le logo du site" height="200">
+
     {% endif %}
 
-        <h2>POSTS</h2>
+</div>
+
+        <h2>POSTS :</h2>
+
         <section class="posts">
             {% for post in posts | reverse %}
                 <div class="post">
@@ -60,6 +82,7 @@
                 </div>
             {% endfor %}
         </section>
+
 {% endblock %}
 
 {% block javascripts %}
@@ -79,7 +102,7 @@
                 spanCount.textContent = response.data.download;
                 window.open( response.data.link, "_blank");
 
-                
+
                 if (icon.classList.contains('far')) {
                     icon.classList.replace('far', 'fas', );
                     icon.classList.replace('fa-arrow-alt-circle-down', 'fa-chevron-circle-down');

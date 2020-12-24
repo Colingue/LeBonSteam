@@ -2,12 +2,22 @@
 
 {% block body %}
     {% if app.user %}
+
     <h1>Mon profil</h1>
+
+    <div class="ProfilEdit">
+
         <div class="form-group">
-            <p>{{ app.user.username }}</p>
+            <p>Bienvenue à toi {{ app.user.username }}</p>
+            <br>
         </div>
 
         <a href="{{ path('edit_profile', {id: app.user.id}) }}">Editer profil</a>
+
+    </div>
+
+    <img class="logogauche" src="{{ asset('images/titre.png') }}" alt="le logo du site" height="200">
+    <img class="logodroite" src="{{ asset('images/courbes.png') }}" alt="le logo du site" height="200">
 
     {% endif %}
 {% endblock %}

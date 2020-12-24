@@ -15,6 +15,39 @@ h1{ /* css des gros titres */
   text-align: center;
 }
 
+h2{ /* css des gros titres numero 2*/
+  margin-top: 100px;
+  text-decoration: underline;
+  color : white;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.ProfilEdit { /* css de l'encadré de profil */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 20px white;
+  -webkit-box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px white;
+  width:600px;
+  height: 200px;
+  color : white;
+  line-height : 20px;
+  padding-top : 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1em;
+}
+
 
 .InscriptionLogin { /* css de l'encadré de connexion ou inscription */
   -webkit-border-radius: 10px;
@@ -38,10 +71,36 @@ h1{ /* css des gros titres */
 }
 
 
-.form-group { /* css des noms des boites d'infos à rentrer pour connexion ou inscription */
+.Index {
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1em;
+}
+
+
+img {
+  position: absolute;
+  top: 17%;
+  z-index: 0;
+}
+.logogauche {
+  left:100px;
+}
+.logodroite {
+  right: 100px;
+}
+
+
+.form-group { /* css des noms des boites d'infos à rentrer pour connexion ou inscription, profil ou edit_profil */
   margin-top: 30px;
   color : white;
 }
+
 .form-control { /* css des boites d'infos à rentrer pour connexion ou inscription */
   background-color: white;
   line-height: 10px;
@@ -63,6 +122,14 @@ h1{ /* css des gros titres */
   background-color: rgba(0, 123, 255);
 }
 
+
+.formEditUser {
+  background-color: white;
+  line-height: 10px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .redirect{ /* css du message de redirect connexion ou inscription */
   margin-top : 20px;
