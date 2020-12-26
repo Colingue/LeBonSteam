@@ -1,0 +1,23 @@
+<div class="bandeau-header">
+    <div class="div-header-nom">
+        <a class="nom-header" href="{{ path('home') }}">LE BON STEAM</a>
+    </div>
+    <div class="form-group form-search div-header-form">
+        {{ form_start(form, {'attr': {'class' : 'form-header'}} ) }}
+            <div class="form-header">
+                {{ form_row(form.q, {'attr': {'class' : 'form-header-text', 'placeholder' : 'Rechercher'}}) }}<br>
+            </div>
+            <div class="form-header">
+                {{ form_row(form.category, {'attr': {'class' : 'form-header-category'}}) }}<br>
+            </div>
+            <div class="form-header">
+                {{ form_row(form.submit, {'label' : '🔍', 'attr': {'class' : 'form-header-submit'}}) }}<br>
+            </div>
+        {{ form_end(form) }}
+    </div>
+    {% if app.user %}
+    <div class="div-header-profile">
+        <a class="float-right" href="{{ path('profile', {'id': app.user.id }) }}">{{ app.user.username }}</a>
+    </div>
+    {% endif %}
+</div>

@@ -31,38 +31,4 @@ class SearchController extends AbstractController
             'form' => $form->createView()
         ]);
     }
-
-    public function searchBar() {
-        $formSearch = $this->createFormBuilder(null)
-            ->setAction($this->generateUrl('handle_search'))
-            ->add('query', TextType::class)
-            ->add('category', EntityType::class, [
-                'class' => Category::class,
-                'required' => false,
-                'empty_data' => 'Tous'
-                ])
-            ->add('search', SubmitType::class)
-            ->getForm();
-
-        return $this->render('search/search_bar.html.twig', [
-            'formSearch' => $formSearch->createView()
-        ]);
-    }
-
-
-    /**
-     * @Route("/Handlesearch", name="handle_search")
-     * @param Request $request
-     */
-    public function handleSearch(Request $request, PostRepository $postRepo) {
-        $query = $request->request->get('form')['query'];
-        $category = $request->request->getaDataDz4;
-        if ($query) {
-            $posts = $postRepo->findPostByName($query, $category);
-        }
-
-        return $this->render('lbs/index.html.twig', [
-            'posts' => $posts
-        ]);
-    }
 }

@@ -2,6 +2,9 @@
 
 {% block title %}Bonjour !{% endblock %}
 
+{% block header %}
+    {% include '_header.html.twig' with {form: form} only %}
+{% endblock %}
 {% block body %}
     <h1>Le Bon Steam</h1>
     {% if not app.user %}
@@ -11,55 +14,72 @@
         <a href="{{ path('profile', {'id': app.user.id }) }}">Mon Espace Personnel</a>
         <a href="{{ path('new_post') }}">Nouveau Post</a>
     {% endif %}
-
-        <h2>POSTS</h2>
-        <section class="posts">
-            {% for post in posts | reverse %}
-                <div class="post">
-                    <a href="{{ path('show_post', {id: post.id}) }}">
-                        <h3>{{ post.title }}</h3>
-                        <div class="author">
-                            <p>Par {{ post.user.username }}</p>
-                        </div>
-                        <div class="metadata">
-                            <p>Publié le {{ post.dateCreation | date('d/m/y') }} à {{ post.DateCreation | date('H:i') }}</p>
-                        </div>
-                        <div class="category">
-                            <a href="#">{{ post.category }}</a>
-                        </div>
-                        {% if app.user == post.user %}
-                            <div class="edit-post">
-                                <a href="{{ path('edit_post', {id: post.id }) }}">Editer</a>
-                            </div>
-                        {% endif %}
-                        <div class="description">
-                            {{ post.description | raw }}
-                            <a href="#" class="btn btn-primary">Go</a>
-                        </div>
-                        <div class="download-link">
-                            <a href="{{ path( 'post_download', {'id': post.id } ) }}" class="btn btn-link js-download">
-                                {% if app.user and post.isDownloadedByUser(app.user) %}
-                                    <i class="fas fa-chevron-circle-down"></i>
-                                {% else %}
-                                    <i class="far fa-arrow-alt-circle-down"></i>
-                                {% endif %}
-                                <span class="js-download">{{ post.downloadCounter | length }}</span>
-                                <span class="js-label">Download</span>
-                            </a>
-
-                        </div>
-
-                        <div class="image">
-                            {% if post.filename %}
-                                <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('my_thumb') }}" alt="image du jeu">
-                            {% else %}
-                                <img src="{{ '/images/posts/placeholder.jpg'| imagine_filter('my_thumb') }}" alt="image du jeu">
-                            {% endif %}
-                        </div>
-                    </a>
+        <div class="group">
+            <div class="navbarre">
+                <div class="nav-element">
+                    <a  href="{{ path("home") }}"><i class="fas fa-home"></i>Accueil</a>
                 </div>
-            {% endfor %}
-        </section>
+                <div class="nav-element">
+                    <a href="#"><i class="fas fa-clone"></i>Catégories</a>
+                </div>
+                <div class="nav-element">
+                    <a href="#"><i class="fas fa-save"></i>Téléchargements</a>
+                </div>
+                <div class="nav-element">
+                    <a href="{{ path("new_post") }}"><i class="fas fa-pen-square"></i>Nouveau Jeu</a>
+                </div>
+                {% if app.user %}
+                <div class="nav-element">
+                    <a href="{{ path('profile', {'id': app.user.id }) }}"><i class="fas fa-user"></i>Mon Profil</a>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="posts">
+                {% for post in posts | reverse %}
+                    <div>
+                            <a class="a_post" href="{{ path('show_post', {id: post.id }) }}">😄😄😄😄😄</a>
+                            <div class="post">
+                                <div class="image">
+                                    {% if post.filename %}
+                                        <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('my_thumb') }}" alt="image du jeu">
+                                    {% else %}
+                                        <img src="{{ '/images/posts/placeholder.jpg'| imagine_filter('my_thumb') }}" alt="image du jeu">
+                                    {% endif %}
+                                </div>
+                                <div class="post-info-home">
+                                    <p>{{ post.title }}</p>
+                                    <div class="category">
+                                        <a href="#">{{ post.category }}</a>
+                                    </div>
+                                    <div class="description">
+                                        {{ post.description | raw }}
+                                    </div>
+                                    <div class="author">
+                                        <p>Par {{ post.user.username }}</p>
+                                    </div>
+
+                                    <div class="download-link">
+                                        <a href="{{ path( 'post_download', {'id': post.id } ) }}" class="btn btn-link js-download">
+                                            <span class="js-download">{{ post.downloadCounter | length }}</span>
+                                            {% if app.user and post.isDownloadedByUser(app.user) %}
+                                                <i class="fas fa-chevron-circle-down"></i>
+                                            {% else %}
+                                                <i class="far fa-arrow-alt-circle-down"></i>
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+
+            <div class="menu-droite">
+
+            </div>
+        </div>
 {% endblock %}
 
 {% block javascripts %}

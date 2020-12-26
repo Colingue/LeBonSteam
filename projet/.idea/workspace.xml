@@ -19,21 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Data/SearchData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/SearchForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet.iml" afterDir="false" />
+    <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories">
+      <change afterPath="$PROJECT_DIR$/templates/_header.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LbsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LbsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SearchForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/search/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +226,8 @@
       <workItem from="1608542720844" duration="12597000" />
       <workItem from="1608647820283" duration="2925000" />
       <workItem from="1608665436397" duration="9690000" />
-      <workItem from="1608722963530" duration="4594000" />
+      <workItem from="1608722963530" duration="5552000" />
+      <workItem from="1608807471636" duration="23556000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -324,7 +320,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608650687305</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories">
+      <created>1608732510800</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1608732510800</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories">
+      <created>1608732519370</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1608732519370</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +372,8 @@
     <MESSAGE value="Mise en place du telechargement (AJAX et JS)&#10;compteur et ouverture de page avec le lien de telechargement" />
     <MESSAGE value="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts" />
     <MESSAGE value="ajout d'une image par defaut" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout d'une image par defaut" />
+    <MESSAGE value="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
@@ -389,10 +400,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
-    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1608650686860">
+    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1608816124446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608650686860" />
+    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608816124446" />
     <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1608649875731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -413,25 +424,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608558558159" />
-    <state width="669" height="446" key="SwitcherDM" timestamp="1607932574500">
+    <state width="669" height="446" key="SwitcherDM" timestamp="1608831478964">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1607932574500" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1608650690552">
+    <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1608831478964" />
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1608732522915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608650690552" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608649840673">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608732522915" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608732450258">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608649840673" />
-    <state x="41" y="190" width="672" height="677" key="run.anything.popup" timestamp="1607775879622">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608732450258" />
+    <state x="762" y="0" width="781" height="830" key="dock-window-1" timestamp="1608810438734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="41" y="190" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607775879622" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607177909869">
+    <state x="762" y="0" width="781" height="830" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1608810438734" />
+    <state x="41" y="190" width="672" height="677" key="run.anything.popup" timestamp="1608810226554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607177909869" />
+    <state x="41" y="190" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608810226554" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608830139043">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608830139043" />
   </component>
 </project>
