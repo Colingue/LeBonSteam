@@ -2,13 +2,24 @@
 
 {% block body %}
     {% if app.user %}
+
         <h1>Editer mon profil</h1>
+
+    <div class="ProfilEdit">
+
             {{ form_start(formEditUser) }}
 
             <div class="form-group">
-                {{ form_row(formEditUser.username, {'label' : 'Nom d\'utilisateur'}) }}
+                {{ form_row(formEditUser.username, {'label' : 'Nom d\'utilisateur :'}) }}
+                <br>
             </div>
+
             {{ form_end(formEditUser) }}
+
+    </div>
+
+    <img class="logogauche" src="{{ asset('images/titre.png') }}" alt="le logo du site" height="200">
+    <img class="logodroite" src="{{ asset('images/courbes.png') }}" alt="le logo du site" height="200">
 
     {% endif %}
 {% endblock %}

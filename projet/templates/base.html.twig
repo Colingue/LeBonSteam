@@ -12,7 +12,9 @@
     <body>
 
         <header>
-            {% block header %}{% endblock %}
+            {{ form_start(form) }}
+
+            {{ form_end(form) }}
         </header>
 
         {% block body %}{% endblock %}
