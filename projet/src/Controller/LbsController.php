@@ -32,6 +32,10 @@ class LbsController extends AbstractController
     // Page d'accueil avec tous les posts
     public function index(PostRepository $postRepo, Request $request): Response
     {
+
+        // RECHERCHE
+        // Les posts affichés correspondent aux recherches
+        // si aucune recherche effectuée alors on affiche tous les posts
         $data = new SearchData();
 
         $form = $this->createForm(SearchForm::class, $data);
@@ -47,7 +51,7 @@ class LbsController extends AbstractController
 
     // Page d'un post en particulier
     /**
-     * @Route ("/post/{id}", name="show_post")
+     * @Route ("/posts/{id}", name="show_post")
      */
     public function showPost(Post $post)
     {
@@ -61,7 +65,7 @@ class LbsController extends AbstractController
     }
 
     /**
-     * @Route ("/post/{id}/edit", name="edit_post")
+     * @Route ("/posts/{id}/edit", name="edit_post")
      * @Route("/new", name="new_post")
      */
 
@@ -104,7 +108,7 @@ class LbsController extends AbstractController
     /**
      * Permet de download un contenu (lien)
      *
-     * @Route ("/post/{id}/download", name="post_download")
+     * @Route ("/posts/{id}/download", name="post_download")
      *
      * @param Post $post
      * @param ObjectManager $manager
@@ -149,26 +153,9 @@ class LbsController extends AbstractController
     }
 
 
-
-    public function search(Request $request, PostRepository $postRepository)
-    {
-
-
-        $formSearch = $this->createForm(SearchType::class);
-        $search = $formSearch->handleRequest($request);
-
-        if ($formSearch->isSubmitted() && $formSearch->isValid()) {
-            $posts = $postRepository->search($search->get('word')->getData());
-        }
-
-        return $this->render('search/search.html.twig', [
-            'posts' => $posts,
-            'formSearch' => $formSearch->createView()
-        ]);
-    }
-
-
     /**
+     * Fonction de l'API de recherche, pour afficher la recherche en JSON
+     *
      * @Route("/apiSearch", name="api_search")
      */
     public function apiSearch(PostRepository $postRepo, Request $request): Response
@@ -187,3 +174,21 @@ class LbsController extends AbstractController
         ]);
     }
 }
+
+
+//public function search(Request $request, PostRepository $postRepository)
+//{
+//
+//
+//    $formSearch = $this->createForm(SearchType::class);
+//    $search = $formSearch->handleRequest($request);
+//
+//    if ($formSearch->isSubmitted() && $formSearch->isValid()) {
+//        $posts = $postRepository->search($search->get('word')->getData());
+//    }
+//
+//    return $this->render('search/search.html.twig', [
+//        'posts' => $posts,
+//        'formSearch' => $formSearch->createView()
+//    ]);
+//}

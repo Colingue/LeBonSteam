@@ -21,6 +21,8 @@ class SecurityController extends AbstractController
 {
 
     /**
+     * Fonction qui permet de s'inscrire sur le site
+     *
      * @Route("/registration", name="security_registration")
      */
     public function registration(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder) {
@@ -46,6 +48,8 @@ class SecurityController extends AbstractController
     }
 
     /**
+     * Fonction qui permet de s'enregistrer sur le site
+     *
      * @Route ("/login", name="security_login")
      */
     public function login(AuthenticationUtils $authenticationUtils){
@@ -57,11 +61,15 @@ class SecurityController extends AbstractController
     }
 
     /**
+     * Permet de se deconnecter du site
+     *
      * @Route ("/logout", name="security_logout")
      */
     public function logout() {}
 
     /**
+     * Permet d'afficher le profil
+     *
      * @Route ("/profile/{id}", name="profile")
      */
    public function profile(User $user ,Request $request) {
@@ -69,6 +77,8 @@ class SecurityController extends AbstractController
    }
 
     /**
+     * Permet d'éditer son profil
+     *
      * @Route ("/profile/{id}/edit", name="edit_profile")
      */
    public function editProfil(User $user, Request $request, EntityManagerInterface $manager)

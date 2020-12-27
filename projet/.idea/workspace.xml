@@ -20,23 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/APIController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LbsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LbsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PostDownload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PostDownload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SearchController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/SearchForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/api/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/api/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search/search_bar.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +235,8 @@
       <workItem from="1608992463041" duration="3333000" />
       <workItem from="1608995811515" duration="2127000" />
       <workItem from="1609005219747" duration="3829000" />
-      <workItem from="1609065515778" duration="15336000" />
+      <workItem from="1609065515778" duration="15730000" />
+      <workItem from="1609087690090" duration="4958000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -359,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608980844636</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="API de Recherche disponible">
+      <created>1609086236168</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609086236168</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +397,8 @@
     <MESSAGE value="ajout d'une image par defaut" />
     <MESSAGE value="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories" />
     <MESSAGE value="Changement CSS page accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changement CSS page accueil" />
+    <MESSAGE value="API de Recherche disponible" />
+    <option name="LAST_COMMIT_MESSAGE" value="API de Recherche disponible" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
@@ -410,10 +409,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="121" key="#YAML/0.0.1536.824@0.0.1536.824" timestamp="1608648865306" />
-    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608981467019">
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609092758001">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1608981467019" />
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1609092758001" />
     <state x="197" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1608558616135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -426,10 +425,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
-    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1608980843454">
+    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1609086235482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608980843454" />
+    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609086235482" />
     <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1608649875731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -462,14 +461,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1608831478964" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1608981372227">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1609086253601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608981372227" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608980918220">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609086253601" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609086239733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608980918220" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1609086239733" />
     <state x="762" y="0" width="781" height="830" key="dock-window-1" timestamp="1608810438734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
