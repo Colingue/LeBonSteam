@@ -15,6 +15,12 @@
             </div>
         {{ form_end(form) }}
     </div>
+
+    <div>
+        <a href="{{ path('api_search') }}">API de Recherche</a>
+    </div>
+
+
     {% if app.user %}
     <div class="div-header-profile">
         <a class="float-right" href="{{ path('profile', {'id': app.user.id }) }}">{{ app.user.username }}</a>

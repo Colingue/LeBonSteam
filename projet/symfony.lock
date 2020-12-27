@@ -84,6 +84,9 @@
     "fakerphp/faker": {
         "version": "v1.13.0"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.0"
+    },
     "hautelook/alice-bundle": {
         "version": "2.1",
         "recipe": {
@@ -150,6 +153,15 @@
     },
     "php": {
         "version": "7.4"
+    },
+    "phpdocumentor/reflection-common": {
+        "version": "2.2.0"
+    },
+    "phpdocumentor/reflection-docblock": {
+        "version": "5.2.2"
+    },
+    "phpdocumentor/type-resolver": {
+        "version": "1.4.0"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -341,6 +353,9 @@
     "symfony/property-access": {
         "version": "v4.4.16"
     },
+    "symfony/property-info": {
+        "version": "v4.4.18"
+    },
     "symfony/routing": {
         "version": "4.2",
         "recipe": {
@@ -378,6 +393,12 @@
     },
     "symfony/security-http": {
         "version": "v4.4.17"
+    },
+    "symfony/serializer": {
+        "version": "v4.4.18"
+    },
+    "symfony/serializer-pack": {
+        "version": "v1.0.4"
     },
     "symfony/service-contracts": {
         "version": "v2.2.0"
@@ -485,5 +506,8 @@
         "files": [
             "./config/packages/vich_uploader.yaml"
         ]
+    },
+    "webmozart/assert": {
+        "version": "1.9.1"
     }
 }

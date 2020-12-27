@@ -4,9 +4,10 @@
 
 {% block body %}
 
-    <h1>Le Bon Steam</h1>
-
 <div class="Index">
+
+    {% include '_header.html.twig' with {'form' : form} %}
+
 
     {% if not app.user %}
     <p>Bienvenue sur notre site LeBonSteam !</p>

@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints\Image;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 
 /**
@@ -22,6 +23,7 @@ class Post
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups("post:read")
      */
     private $id;
 
@@ -33,12 +35,14 @@ class Post
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("post:read")
      */
     private $title;
 
     /**
      * @var string|null
      * @ORM\Column(type="string", length=255)
+     * @Groups("post:read")
      */
     private $filename;
 
@@ -48,32 +52,38 @@ class Post
      *     mimeTypes="image/jpeg"
      * )
      * @Vich\UploadableField(mapping="property_image", fileNameProperty="filename")
+     * @Groups("post:read")
      */
     private $imageFile;
 
     /**
      * @ORM\Column(type="text")
+     * @Groups("post:read")
      */
     private $description;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups("post:read")
      */
     private $date_creation;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("post:read")
      */
     private $download_link;
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="posts")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups("post:read")
      */
     private $category;
 
     /**
      * @ORM\OneToMany(targetEntity=PostDownload::class, mappedBy="post")
+     * @Groups("post:read")
      */
     private $downloadCounter;
 

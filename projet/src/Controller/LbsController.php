@@ -21,6 +21,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class LbsController extends AbstractController
 {
@@ -32,12 +33,14 @@ class LbsController extends AbstractController
     public function index(PostRepository $postRepo, Request $request): Response
     {
         $data = new SearchData();
+
         $form = $this->createForm(SearchForm::class, $data);
         $form->handleRequest($request);
+
         $posts = $postRepo->findSearch($data);
 
         return $this->render('lbs/index.html.twig', [
-            'posts' => $posts ,
+            'posts' => $posts,
             'form' => $form->createView()
         ]);
     }
@@ -161,6 +164,26 @@ class LbsController extends AbstractController
         return $this->render('search/search.html.twig', [
             'posts' => $posts,
             'formSearch' => $formSearch->createView()
+        ]);
+    }
+
+
+    /**
+     * @Route("/apiSearch", name="api_search")
+     */
+    public function apiSearch(PostRepository $postRepo, Request $request): Response
+    {
+        $dataApi = new SearchData();
+
+        $formApi = $this->createForm(SearchForm::class, $dataApi);
+        $formApi->handleRequest($request);
+
+        if ($formApi->isSubmitted() && $formApi->isValid()) {
+            return $this->json($postRepo->findSearch($dataApi), 200, [], ['groups' => 'post:read']);
+        }
+
+        return $this->render('api/index.html.twig', [
+            'formApi' => $formApi->createView()
         ]);
     }
 }
