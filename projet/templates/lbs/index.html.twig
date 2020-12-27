@@ -2,12 +2,11 @@
 
 {% block title %}Bonjour !{% endblock %}
 
-{% block body %}
-
-<div class="Index">
+{% block body %}s
 
     {% include '_header.html.twig' with {'form' : form} %}
 
+<div class="Index">
 
     {% if not app.user %}
     <p>Bienvenue sur notre site LeBonSteam !</p>
@@ -16,19 +15,16 @@
     <br>
     <a href="{{ path('security_login') }}">La connexion, c'est par ici !</a>
 
-    <img class="logogauche" src="{{ asset('images/titre.png') }}" alt="le logo du site" height="200">
-    <img class="logodroite" src="{{ asset('images/courbes.png') }}" alt="le logo du site" height="200">
+    <img class="logogauche" src="{{ asset('images/lebonsteam1.png') }}" alt="le logo du site" height="500">
+    <img class="logodroite" src="{{ asset('images/lebonsteam2.png') }}" alt="le logo du site" height="500">
 
     {% else %}
-    <Br>
-    <br>
-    <br>
     <a href="{{ path('security_logout') }}">Se deconnecter</a>  |
         <a href="{{ path('profile', {'id': app.user.id }) }}">Mon Espace Personnel</a> |
         <a href="{{ path('new_post') }}">Nouveau Post</a>
 
-    <img class="logogauche" src="{{ asset('images/titre.png') }}" alt="le logo du site" height="200">
-    <img class="logodroite" src="{{ asset('images/courbes.png') }}" alt="le logo du site" height="200">
+    <img class="logogauche" src="{{ asset('images/lebonsteam1.png') }}" alt="le logo du site" height="500">
+    <img class="logodroite" src="{{ asset('images/lebonsteam2.png') }}" alt="le logo du site" height="500">
 
     {% endif %}
 

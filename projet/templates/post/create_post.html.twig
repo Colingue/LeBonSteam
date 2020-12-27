@@ -1,31 +1,41 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
     <h1>Creation d'un post</h1>
+
+<div class ="CreaPost">
+
     <div class="form-group">
         {{ form_start(formPostCreator) }}
     </div>
 
     <div class="form-group">
-        {{ form_row(formPostCreator.title, {'label' : 'Titre', 'attr': {'class' : 'form-control'}} ) }}
+        {{ form_row(formPostCreator.title, {'label' : 'Titre', 'attr': {'class' : 'form-control'}} ) }}<br>
     </div>
 
     <div class="form-group">
-        {{ form_row(formPostCreator.description, {'label' : 'Description', 'attr': {'class' : 'form-control'}} ) }}
+        {{ form_row(formPostCreator.description, {'label' : 'Description', 'attr': {'class' : 'form-control'}} ) }}<br>
     </div>
 
     <div class="form-group">
-        {{ form_row(formPostCreator.category, {'label' : 'Catégories', 'attr': {'class' : 'form-control'}} ) }}
+        {{ form_row(formPostCreator.category, {'label' : 'Catégories', 'attr': {'class' : 'form-control'}} ) }}<br>
     </div>
 
     <div class="form-group">
-    {{ form_row(formPostCreator.download_link, {'label' : 'Lien de téléchargement', 'attr': {'class' : 'form-control'}} ) }}
+    {{ form_row(formPostCreator.download_link, {'label' : 'Lien de téléchargement', 'attr': {'class' : 'form-control'}} ) }}<br>
     </div>
 
     <div class="form-group">
-        {{ form_row(formPostCreator.imageFile, {'label' : 'Image du jeu', 'attr': {'class' : 'form-control'}} ) }}
+        {{ form_row(formPostCreator.imageFile, {'label' : 'Image du jeu', 'attr': {'class' : 'form-control'}} ) }}<br><br>
     </div>
 
     <button type="submit" class="btn btn-success">Publier </button>
+
+    <img class="logogauche" src="{{ asset('images/lebonsteam1.png') }}" alt="le logo du site" height="500">
+    <img class="logodroite" src="{{ asset('images/lebonsteam2.png') }}" alt="le logo du site" height="500">
+
+</div>
+
     {{ form_end(formPostCreator) }}
 {% endblock %}
