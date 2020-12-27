@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body{ /* css du corps de page */
-  background : #1C294F;
+  background : #060b56;
   font-family: "Josefin Sans";
 }
 
@@ -20,7 +20,7 @@ h1{ /* css des gros titres */
 }
 
 h2{ /* css des gros titres numero 2*/
-  margin-top: 100px;
+  margin-top: -260px;
   text-decoration: underline;
   color : white;
   font-family: 'Pacifico', cursive;
@@ -28,6 +28,22 @@ h2{ /* css des gros titres numero 2*/
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+
+.Index {
+  width:600px;
+  height: 500px;
+  color : white;
+  line-height : 20px;
+  padding-top : 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1em;
 }
 
 
@@ -73,6 +89,42 @@ h2{ /* css des gros titres numero 2*/
   text-align: center;
   line-height: 1em;
 }
+
+
+.CreaPost {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 20px white;
+  -webkit-box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px white;
+  width:600px;
+  height: 530px;
+  color : white;
+  line-height : 20px;
+  padding-top : 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1em;
+}
+
+
+img {
+  position: absolute;
+  top: 17%;
+  z-index: 0;
+}
+.logogauche {
+  left:100px;
+}
+.logodroite {
+  right: 100px;
+}
+
 
 .form-registration{
   margin-top: 30px;
@@ -129,12 +181,14 @@ h2{ /* css des gros titres numero 2*/
 }
 .div-header-nom{
   width: 35%;
+  margin-left: 20px;
 }
 .div-header-form{
   width: 30%;
 }
 .div-header-profile{
   width: 30%;
+  margin-right: 20px;
 }
 
 .div-header-profile a{
