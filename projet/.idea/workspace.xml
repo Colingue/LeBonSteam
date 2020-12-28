@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,12 +169,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\public\images\posts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\public" />
       <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\templates\search" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\public\images\posts" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -239,7 +240,8 @@
       <workItem from="1609087690090" duration="4958000" />
       <workItem from="1609162548270" duration="2025000" />
       <workItem from="1609164593209" duration="1206000" />
-      <workItem from="1609165935247" duration="1879000" />
+      <workItem from="1609165935247" duration="2499000" />
+      <workItem from="1609169109720" duration="163000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -367,7 +369,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609164282661</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="API de Recherche disponible">
+      <created>1609168486454</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609168486454</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Index changement">
+      <created>1609168501559</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609168501559</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +424,8 @@
     <MESSAGE value="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories" />
     <MESSAGE value="Changement CSS page accueil" />
     <MESSAGE value="API de Recherche disponible" />
-    <option name="LAST_COMMIT_MESSAGE" value="API de Recherche disponible" />
+    <MESSAGE value="Index changement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Index changement" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
@@ -435,10 +452,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
-    <state x="482" y="0" key="CommitChangelistDialog2" timestamp="1609164282182">
+    <state x="482" y="0" key="CommitChangelistDialog2" timestamp="1609168501153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="482" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609164282182" />
+    <state x="482" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609168501153" />
     <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1608649875731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -471,10 +488,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1608831478964" />
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1609164178493">
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1609168508607">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609164178493" />
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609168508607" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609086239733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
