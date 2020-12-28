@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PostDownloadRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
+
 /**
  * @ORM\Entity(repositoryClass=PostDownloadRepository::class)
  */
@@ -14,7 +14,6 @@ class PostDownload
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups("post:read")
      */
     private $id;
 

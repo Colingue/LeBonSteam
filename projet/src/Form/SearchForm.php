@@ -24,7 +24,7 @@ class SearchForm extends AbstractType
             ])
             ->add('category', EntityType::class, [
                 'label' => false,
-                'data' => 'Tous',
+                'empty_data' => 'Tous',
                 'required' => false,
                 'class' => Category::class
             ])

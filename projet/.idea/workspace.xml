@@ -19,7 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories">
+      <change afterPath="$PROJECT_DIR$/templates/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SearchForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lbs/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lbs/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
+    </list>
+>>>>>>> parent of 1d17b19... API de Recherche disponible
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,15 +69,19 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
@@ -85,8 +103,11 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
@@ -128,6 +149,7 @@
       <path value="$PROJECT_DIR$/vendor/nelmio/alice" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
       <path value="$PROJECT_DIR$/vendor/hautelook/alice-bundle" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
       <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
@@ -141,6 +163,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
+=======
+>>>>>>> parent of 1d17b19... API de Recherche disponible
     </include_path>
   </component>
   <component name="ProjectId" id="1knSPcPLjNcvLLakz9uSqQoywyo" />
@@ -163,7 +187,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -230,6 +254,7 @@
       <workItem from="1608665436397" duration="9690000" />
       <workItem from="1608722963530" duration="5552000" />
       <workItem from="1608807471636" duration="23556000" />
+<<<<<<< HEAD
       <workItem from="1608980779374" duration="2728000" />
       <workItem from="1608992463041" duration="3333000" />
       <workItem from="1608995811515" duration="2127000" />
@@ -240,6 +265,8 @@
       <workItem from="1609164593209" duration="1206000" />
       <workItem from="1609165935247" duration="2499000" />
       <workItem from="1609169109720" duration="163000" />
+=======
+>>>>>>> parent of 1d17b19... API de Recherche disponible
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
@@ -346,6 +373,7 @@
       <option name="project" value="LOCAL" />
       <updated>1608732519370</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00016" summary="Changement CSS page accueil">
       <created>1608980844636</created>
       <option name="number" value="00016" />
@@ -382,6 +410,9 @@
       <updated>1609168501559</updated>
     </task>
     <option name="localTasksCounter" value="21" />
+=======
+    <option name="localTasksCounter" value="16" />
+>>>>>>> parent of 1d17b19... API de Recherche disponible
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,10 +451,14 @@
     <MESSAGE value="Mise en place de la barre de recherche simple (sur le titre et la description), ajout d'une image pour les posts" />
     <MESSAGE value="ajout d'une image par defaut" />
     <MESSAGE value="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories" />
+<<<<<<< HEAD
     <MESSAGE value="Changement CSS page accueil" />
     <MESSAGE value="API de Recherche disponible" />
     <MESSAGE value="Index changement" />
     <option name="LAST_COMMIT_MESSAGE" value="Index changement" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="Changement du systeme de recherche&#10;maintenant on a un filtre disponible pour les categories" />
+>>>>>>> parent of 1d17b19... API de Recherche disponible
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1607016609133">
@@ -434,26 +469,40 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="121" key="#YAML/0.0.1536.824@0.0.1536.824" timestamp="1608648865306" />
+<<<<<<< HEAD
     <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609092758001">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1609092758001" />
+=======
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608724419363">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1608724419363" />
+>>>>>>> parent of 1d17b19... API de Recherche disponible
     <state x="197" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1608558616135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="197" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1608558616135" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609078012463">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608731981729">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1609078012463" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608731981729" />
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1607362463381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="287" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1536.824@0.0.1536.824" timestamp="1607362463381" />
+<<<<<<< HEAD
     <state x="482" y="0" key="CommitChangelistDialog2" timestamp="1609168501153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609168501153" />
+=======
+    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1608816124446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608816124446" />
+>>>>>>> parent of 1d17b19... API de Recherche disponible
     <state x="151" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1608649875731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -462,14 +511,6 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606822333878" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1608981238504">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1608981238504" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1608981238515">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1608981238514" />
     <state x="534" y="135" key="NewPhpClassDialog" timestamp="1608724453090">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -478,14 +519,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1607933163167" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1609007401146">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1608558558159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1609007401146" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608558558159" />
     <state width="669" height="446" key="SwitcherDM" timestamp="1608831478964">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="669" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1608831478964" />
+<<<<<<< HEAD
     <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1609168508607">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -494,6 +536,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1609086239733" />
+=======
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2" timestamp="1608732522915">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="365" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608732522915" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608732450258">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608732450258" />
+>>>>>>> parent of 1d17b19... API de Recherche disponible
     <state x="762" y="0" width="781" height="830" key="dock-window-1" timestamp="1608810438734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -502,9 +554,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="41" y="190" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608810226554" />
+<<<<<<< HEAD
     <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609164466851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609164466851" />
+=======
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608830139043">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608830139043" />
+>>>>>>> parent of 1d17b19... API de Recherche disponible
   </component>
 </project>

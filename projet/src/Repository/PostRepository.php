@@ -71,7 +71,7 @@ class PostRepository extends ServiceEntityRepository
 
             if (!empty($search->q)) {
                 $query = $query
-                    ->andWhere('p.title LIKE :q OR p.description LIKE :q')
+                    ->andWhere('p.title LIKE :q')
                     ->setParameter('q', "%{$search->q}%");
             }
 
@@ -85,25 +85,15 @@ class PostRepository extends ServiceEntityRepository
 
 
 
-//    public function apiFindAll() {
-//        $qb = $this->createQueryBuilder('a');
-//
-//        $qb->select('p', 'c')
-//            ->from('EagleAdminBundle:Products', 'p')
-//            ->orderBy('p.id', 'DESC')
-//            ->join('p.category', 'c');
-//
-//    if ($category != 0) {
-//
-//        $qb->andWhere('p.category = :category')
-//            ->setParameter('category', $category);
-//            ->select('a.id', 'a.title', 'a.description', 'a.category', 'a.dateCreation')
-//            ->orderBy('a.dateCreation', 'DESC');
-//
-//        $query = $qb->getQuery();
-//
-//        return $query->execute();
-//    }
+    public function apiFindAll() {
+        $qb = $this->createQueryBuilder('a')
+            ->select('a.id', 'a.title', 'a.description', 'a.category', 'a.dateCreation')
+            ->orderBy('a.dateCreation', 'DESC');
+
+        $query = $qb->getQuery();
+
+        return $query->execute();
+    }
 
     // /**
     //  * @return Post[] Returns an array of Post objects

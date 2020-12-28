@@ -21,7 +21,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\SerializerInterface;
 
 class LbsController extends AbstractController
 {
@@ -37,14 +36,12 @@ class LbsController extends AbstractController
         // Les posts affichés correspondent aux recherches
         // si aucune recherche effectuée alors on affiche tous les posts
         $data = new SearchData();
-
         $form = $this->createForm(SearchForm::class, $data);
         $form->handleRequest($request);
-
         $posts = $postRepo->findSearch($data);
 
         return $this->render('lbs/index.html.twig', [
-            'posts' => $posts,
+            'posts' => $posts ,
             'form' => $form->createView()
         ]);
     }
@@ -153,6 +150,7 @@ class LbsController extends AbstractController
     }
 
 
+<<<<<<< HEAD
     /**
      * Fonction de l'API de recherche, pour afficher la recherche en JSON
      *
@@ -171,6 +169,23 @@ class LbsController extends AbstractController
 
         return $this->render('api/index.html.twig', [
             'formApi' => $formApi->createView()
+=======
+
+    public function search(Request $request, PostRepository $postRepository)
+    {
+
+
+        $formSearch = $this->createForm(SearchType::class);
+        $search = $formSearch->handleRequest($request);
+
+        if ($formSearch->isSubmitted() && $formSearch->isValid()) {
+            $posts = $postRepository->search($search->get('word')->getData());
+        }
+
+        return $this->render('search/search.html.twig', [
+            'posts' => $posts,
+            'formSearch' => $formSearch->createView()
+>>>>>>> parent of 1d17b19... API de Recherche disponible
         ]);
     }
 }
