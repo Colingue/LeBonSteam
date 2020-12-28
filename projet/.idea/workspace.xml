@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15b99d5b-a6de-4e9e-a750-0fe962c7e631" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_header.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,11 +168,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\public" />
+      <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\templates\search" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\public\images\posts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\colin\Desktop\LeBonSteam\projet\templates\search" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -238,6 +238,8 @@
       <workItem from="1609065515778" duration="15730000" />
       <workItem from="1609087690090" duration="4958000" />
       <workItem from="1609162548270" duration="2025000" />
+      <workItem from="1609164593209" duration="1206000" />
+      <workItem from="1609165935247" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="Création du projet Symfony">
       <created>1606334950218</created>
